@@ -31,10 +31,10 @@ export class AuthActionBuilder {
         }
     }
 
-    public static SignOutFailed(error : any) : IAuthAction{
+    public static SignOutFailed(error : string | undefined) : IAuthAction{
         return {
             action : AuthActions.SignOutFailed,
-            error : JSON.stringify(error)
+            error : error
         }
     }
 
@@ -45,10 +45,10 @@ export class AuthActionBuilder {
         }
     }
 
-    public static RefreshFailed(error : any) : IAuthAction{
+    public static RefreshFailed(error : string | undefined) : IAuthAction{
         return {
             action : AuthActions.RefreshFailed,
-            error : JSON.stringify(error)
+            error : error
         }
     }
 
@@ -59,10 +59,10 @@ export class AuthActionBuilder {
         }
     }
 
-    public static SignInFailed(error : any) : IAuthAction{
+    public static SignInFailed(error : string | undefined) : IAuthAction{
         return {
             action : AuthActions.AutoSignInFailed,
-            error : JSON.stringify(error)
+            error : error
         }
     }
 
@@ -73,10 +73,10 @@ export class AuthActionBuilder {
         }
     }
 
-    public static AutoSignInFailed(error : any) : IAuthAction{
+    public static AutoSignInFailed(error : string | undefined) : IAuthAction{
         return {
             action : AuthActions.AutoSignInFailed,
-            error : JSON.stringify(error)
+            error : error
         }
     }
 }

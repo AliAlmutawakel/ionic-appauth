@@ -3,7 +3,7 @@ import { Plugins } from '@capacitor/core';
 
 export class CapacitorStorage implements StorageBackend {
 
-  async getItem(name: string): Promise<string> {
+  async getItem(name: string): Promise<string | null> {
     if(!Plugins.Storage)
       throw new Error("Capacitor Storage Is Undefined!");
 
